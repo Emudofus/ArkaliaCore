@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A20654FC-40E6-4F72-9DB7-FF9A0A439642}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ArkaliaCore.Game</RootNamespace>
+    <AssemblyName>ArkaliaCore.Game</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\Desktop\Developpement\Arkalia\Core\Game\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\Desktop\Developpement\Arkalia\Core\Game\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo_arkalia_core.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Alchemy">
+      <HintPath>..\..\..\..\..\Desktop\Developpement\Arkalia\Olivine-Labs-Alchemy-Websockets-cbc6040\src\Alchemy\bin\Debug\Alchemy.dll</HintPath>
+    </Reference>
+    <Reference Include="Candy.Core">
+      <HintPath>..\..\..\..\..\Desktop\Developpement\Warkalia\Candy.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="lua51">
+      <HintPath>..\..\..\..\..\Desktop\Developpement\Warkalia\lua51.dll</HintPath>
+    </Reference>
+    <Reference Include="LuaInterface">
+      <HintPath>..\..\..\..\..\Desktop\Developpement\Warkalia\LuaInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\Desktop\Developpement\Warkalia\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="SilverSock">
+      <HintPath>..\..\..\..\..\Desktop\Developpement\Crystal\Game\SilverSock.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database\DatabaseManager.cs" />
+    <Compile Include="Database\Models\AccountInformationsModel.cs" />
+    <Compile Include="Database\Models\BreedModel.cs" />
+    <Compile Include="Database\Models\CharacterModel.cs" />
+    <Compile Include="Database\Models\ExpFloorModel.cs" />
+    <Compile Include="Database\Models\ItemTemplateModel.cs" />
+    <Compile Include="Database\Models\MapModel.cs" />
+    <Compile Include="Database\Models\NpcDialogModel.cs" />
+    <Compile Include="Database\Models\NpcModel.cs" />
+    <Compile Include="Database\Models\NpcPosModel.cs" />
+    <Compile Include="Database\Models\TriggerModel.cs" />
+    <Compile Include="Database\Models\WaypointModel.cs" />
+    <Compile Include="Database\Models\WorldItemModel.cs" />
+    <Compile Include="Database\Tables\AccountInformationsTable.cs" />
+    <Compile Include="Database\Tables\BreedTable.cs" />
+    <Compile Include="Database\Tables\CharacterTable.cs" />
+    <Compile Include="Database\Tables\ExpFloorTable.cs" />
+    <Compile Include="Database\Tables\ItemTemplateTable.cs" />
+    <Compile Include="Database\Tables\MapTable.cs" />
+    <Compile Include="Database\Tables\NpcDialogTable.cs" />
+    <Compile Include="Database\Tables\NpcPosTable.cs" />
+    <Compile Include="Database\Tables\NpcTable.cs" />
+    <Compile Include="Database\Tables\TriggerTable.cs" />
+    <Compile Include="Database\Tables\WaypointTable.cs" />
+    <Compile Include="Database\Tables\WorldItemTable.cs" />
+    <Compile Include="Enums\ConsoleColorEnum.cs" />
+    <Compile Include="Enums\EffectTypeEnum.cs" />
+    <Compile Include="Enums\EmoteTypeEnum.cs" />
+    <Compile Include="Enums\GameActionEnum.cs" />
+    <Compile Include="Enums\GameObjectTypeEnum.cs" />
+    <Compile Include="Enums\ItemPositionsEnum.cs" />
+    <Compile Include="Enums\StatsTypeEnum.cs" />
+    <Compile Include="Game\Accounts\AccountManager.cs" />
+    <Compile Include="Game\Breeds\BreedManager.cs" />
+    <Compile Include="Game\Chat\ChannelManager.cs" />
+    <Compile Include="Game\Chat\Channels\AdminChannel.cs" />
+    <Compile Include="Game\Chat\Channels\Channel.cs" />
+    <Compile Include="Game\Chat\Channels\AdminSubChannel.cs" />
+    <Compile Include="Game\Chat\Channels\DefaultChannel.cs" />
+    <Compile Include="Game\Chat\Channels\RecruitChannel.cs" />
+    <Compile Include="Game\Chat\Channels\TradeChannel.cs" />
+    <Compile Include="Game\Chat\PrivateMessage.cs" />
+    <Compile Include="Game\Commands\Command.cs" />
+    <Compile Include="Game\Commands\CommandManager.cs" />
+    <Compile Include="Game\Commands\CommandParameters.cs" />
+    <Compile Include="Game\Commands\Operator\FindCommand.cs" />
+    <Compile Include="Game\Commands\Operator\ItemCommand.cs" />
+    <Compile Include="Game\Commands\Operator\KamasCommand.cs" />
+    <Compile Include="Game\Commands\Operator\MapInfosCommand.cs" />
+    <Compile Include="Game\Commands\Operator\RegenCommand.cs" />
+    <Compile Include="Game\Commands\Operator\SayCommand.cs" />
+    <Compile Include="Game\Commands\Operator\TeleportCommand.cs" />
+    <Compile Include="Game\Commands\Players\HelpCommand.cs" />
+    <Compile Include="Game\Commands\Players\InfosCommand.cs" />
+    <Compile Include="Game\Commands\Players\ScriptCommand.cs" />
+    <Compile Include="Game\Commands\Players\StartCommand.cs" />
+    <Compile Include="Game\Controllers\CharacterController.cs" />
+    <Compile Include="Game\Controllers\MapController.cs" />
+    <Compile Include="Game\Engines\ClientEngine.cs" />
+    <Compile Include="Game\Engines\EffectEngine.cs" />
+    <Compile Include="Game\Engines\Item\ItemEffect.cs" />
+    <Compile Include="Game\Engines\MapEngine.cs" />
+    <Compile Include="Game\Engines\PathEngine.cs" />
+    <Compile Include="Game\Engines\Pathfinding\PathNode.cs" />
+    <Compile Include="Game\Floors\FloorsManager.cs" />
+    <Compile Include="Game\Friends\Friend.cs" />
+    <Compile Include="Game\Handlers\ChatHandler.cs" />
+    <Compile Include="Game\Handlers\CommandHandler.cs" />
+    <Compile Include="Game\Handlers\EmoteHandler.cs" />
+    <Compile Include="Game\Handlers\FriendHandler.cs" />
+    <Compile Include="Game\Handlers\GameActionHandler.cs" />
+    <Compile Include="Game\Handlers\GameMapHandler.cs" />
+    <Compile Include="Game\Handlers\ItemHandler.cs" />
+    <Compile Include="Game\Handlers\NpcHandler.cs" />
+    <Compile Include="Game\Handlers\StatHandler.cs" />
+    <Compile Include="Game\Handlers\WaypointHandler.cs" />
+    <Compile Include="Game\Items\CharacterBag.cs" />
+    <Compile Include="Game\Items\ItemBag.cs" />
+    <Compile Include="Game\Items\ItemManager.cs" />
+    <Compile Include="Game\Items\ItemStack.cs" />
+    <Compile Include="Game\Jobs\Jobs\Peasant.cs" />
+    <Compile Include="Game\Jobs\Job.cs" />
+    <Compile Include="Game\Jobs\JobInstance.cs" />
+    <Compile Include="Game\Jobs\JobSkill.cs" />
+    <Compile Include="Game\Jobs\JobsManager.cs" />
+    <Compile Include="Game\Models\AccountModel.cs" />
+    <Compile Include="Definitions.cs" />
+    <Compile Include="Game\Handlers\AccountHandler.cs" />
+    <Compile Include="Game\Controllers\TicketController.cs" />
+    <Compile Include="Game\Models\AccountTicket.cs" />
+    <Compile Include="Game\Npcs\NpcInstance.cs" />
+    <Compile Include="Game\Npcs\NpcManager.cs" />
+    <Compile Include="Game\Pets\PetsManager.cs" />
+    <Compile Include="Game\Stats\BasicStatistics.cs" />
+    <Compile Include="Game\Stats\BreedFloor.cs" />
+    <Compile Include="Game\Stats\StatField.cs" />
+    <Compile Include="Game\Waypoints\WaypointManager.cs" />
+    <Compile Include="Game\World.cs" />
+    <Compile Include="Interop\Crystal\CrystalPacket.cs" />
+    <Compile Include="Interop\Crystal\PacketHeaderEnum.cs" />
+    <Compile Include="Interop\Crystal\Packets\PlayerConnectedMessage.cs" />
+    <Compile Include="Interop\Crystal\Packets\PlayerCreatedCharacterMessage.cs" />
+    <Compile Include="Interop\Crystal\Packets\PlayerDeletedCharacterMessage.cs" />
+    <Compile Include="Interop\Crystal\Packets\HelloKeyMessage.cs" />
+    <Compile Include="Interop\Crystal\Packets\PlayerDisconnectedMessage.cs" />
+    <Compile Include="Modules\Scripting\LuaScript.cs" />
+    <Compile Include="Modules\Scripting\ScriptKernel.cs" />
+    <Compile Include="Network\Game\GameClient.cs" />
+    <Compile Include="Network\Game\GameHandler.cs" />
+    <Compile Include="Network\Game\GameServer.cs" />
+    <Compile Include="Network\Realm\SyncClient.cs" />
+    <Compile Include="Network\Realm\SyncServer.cs" />
+    <Compile Include="Network\Web\WebClientConnection.cs" />
+    <Compile Include="Network\Web\WebServer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Statistics.cs" />
+    <Compile Include="Utilities\Basic.cs" />
+    <Compile Include="Utilities\ConsoleStyle.cs" />
+    <Compile Include="Utilities\Delayer.cs" />
+    <Compile Include="Utilities\FileBuffer.cs" />
+    <Compile Include="Utilities\Formulas.cs" />
+    <Compile Include="Utilities\GuidGenerator.cs" />
+    <Compile Include="Utilities\Logger.cs" />
+    <Compile Include="Utilities\MemoryString.cs" />
+    <Compile Include="Utilities\Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <Content Include="logo_arkalia_core.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Settings.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Game\Jobs\Skills\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
